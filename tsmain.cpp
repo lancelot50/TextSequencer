@@ -14,7 +14,7 @@ bool byDate(const string& lhs, const string& rhs)
 
 int main()
 {
-	ifstream from("textfile1.txt");
+	ifstream from("input.txt");
 
 	if (!from.is_open())
 		return 0;
@@ -32,8 +32,8 @@ int main()
 
 	ofstream to("output.txt");
 
-	for (unsigned int i = 0; i < inputArray.size(); ++i)
-		to << inputArray[i] << endl;
+	for (const auto& i : inputArray)
+		to << i << endl;
 
 	cin.get();
 	return 0;
